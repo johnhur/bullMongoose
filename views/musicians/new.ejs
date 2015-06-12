@@ -1,0 +1,10 @@
+<% include ../partials/header %>
+<h1>YO NEW</h1>
+<form method="POST" action="/musicians">
+	<p>Name: <input type="text" name="musician[name]" autofocus></p>
+	<p>Birth: <input type="text" name="musician[birth]"></p>
+	<p>Genre: <input type="text" name="musician[genre]"></p>
+	<p>Photo: <input type="text" name="musician[photo]"></p>
+	<input type="submit" value="SUBMIT">
+</form>
+<% include ../partials/footer %>

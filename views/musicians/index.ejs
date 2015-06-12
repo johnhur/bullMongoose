@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+<h1>John's Musicians</h1>
+<% musicians.forEach(function(musician){ %>
+<table>
+
+<tr>
+<ul>
+		<td><li><%=musician.name%></li></td>
+		<td><a href="/musicians/<%=musician.id%>">Details</a></td>
+		<td><a href="/musician/<%=musician.id%>/edit">Edit</a></td>
+		<td><form action="/musicians/<%= musician.id %>?_method=delete" method= "POST"><input type="submit" value="X"></form></td>
+</ul>
+</tr>
+</table>
+
+<% }) %>
+
+<% include ../partials/footer %>

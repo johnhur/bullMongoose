@@ -1,0 +1,10 @@
+<% include ../partials/header %>
+<h1>YO EDIT</h1>
+<form action="/musicians/<%=musician.id%>?_method=PUT" method="POST" >
+	<p>Name: <input type="text" name="musician[name]" value="<%=musician.name%>"autofocus></p>
+	<p>Birth: <input type="text" name="musician[birth]" value="<%=musician.birth%>"></p>
+	<p>Genre: <input type="text" name="musician[genre]" value="<%=musician.genre%>"></p>
+	<p>Photo: <input type="text" name="musician[photo]"value="<%=musician.photo%>"></p>
+	<input type="submit" value="SUBMIT">
+</form>
+<% include ../partials/footer %>

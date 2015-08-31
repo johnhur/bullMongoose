@@ -55,11 +55,11 @@ app.get("/musician/:id/edit", function(req,res){
 	db.Musician.findById(req.params.id, function(err, musician){
 		res.render("musicians/edit", {musician:musician})
 	})
-	
 })
 //UPDATE
 app.put('/musicians/:id', function(req,res){
-  db.Musician.findByIdAndUpdate(req.params.id, req.body.musician, function(err,musician){
+  db.Musician.findByIdAndUpdate(req.params.id, req.body.musician,
+  function(err,musician){
     if(err){
     res.render("404");
   }else{
@@ -80,7 +80,7 @@ app.put('/musicians/:id', function(req,res){
 app.delete('/musicians/:id', function(req,res){
 	db.Musician.findByIdAndRemove(req.params.id, function(err, book){
 		  if (err) throw err;
-      res.redirect('/');
+      res.redirect('/musicians');
 	})
 })
 
